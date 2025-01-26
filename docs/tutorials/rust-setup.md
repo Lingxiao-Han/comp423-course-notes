@@ -120,11 +120,12 @@ cargo build
 ```
 ??? note "Difference between gcc and cargo build"
     In simple words, gcc is a simpely a compiler but cargo build is a build tool. Think of cargo as a compiler + project manager + dependency handler in one package, while gcc is just the raw compiler.
-(D) You can now find the build project at `/target/debug/Hello-World`. Run following command to execute your first Rush program!
+(D) You can now find the build project at `/target/debug/Hello-World`. Run following command to execute your first Rust program!
 ```bash
 ./target/debug/Hello-World
 ```
 You will see output `Hello COMP423` in your terminal.
+
 (E) Then we are going to explore a different way of running our Rust program. First, we clean our build.
 ```bash
 cargo clean
