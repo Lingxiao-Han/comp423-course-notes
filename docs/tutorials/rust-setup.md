@@ -62,7 +62,7 @@ git branch -M main
 ```bash
 git push --set-upstream origin main
 ```
-!!! note
+??? note
 
     `git push --set-upstream origin main`: This command pushes the main branch to the remote repository origin. The `--set-upstream` flag sets up the main branch to track the remote branch, meaning future pushes and pulls can be done without specifying the branch name and just writing git push origin when working on your local main branch. This long flag has a corresponding `-u` short flag.
 
@@ -95,7 +95,7 @@ The devcontainer.json file defines the configuration for your development enviro
   "postCreateCommand": "cargo new Hello-World --bin --vcs none"
 }
 ```
-!!! note
+??? note
 
     `cargo new Hello-World --bin --vcs none`: This command create a new binary project named `Hello-World`. `new` is a subcommand of cargo which creats a new Rust project in a new directory. `Hello-World` is the name of the directory. `--bin` is a flag specify it is a binary project, which is an `excutable program`. Without `--bin`, `cargo new` will instead create a new `library project`, which is a library for other programs. `-vcs none` is a flag disable version control initialization. We dont want a new git repo because we already have one.
 
@@ -118,13 +118,14 @@ fn main() {
 ```bash
 cargo build
 ```
-!!! note "Difference between gcc and cargo build"
+??? note "Difference between gcc and cargo build"
     In simple words, gcc is a simpely a compiler but cargo build is a build tool. Think of cargo as a compiler + project manager + dependency handler in one package, while gcc is just the raw compiler.
-(D) You can now find the build project at `/target/debug/Hello-World`. Run following command to execute your first Rush program!
+(D) You can now find the build project at `/target/debug/Hello-World`. Run following command to execute your first Rust program!
 ```bash
 ./target/debug/Hello-World
 ```
 You will see output `Hello COMP423` in your terminal.
+
 (E) Then we are going to explore a different way of running our Rust program. First, we clean our build.
 ```bash
 cargo clean
@@ -134,7 +135,7 @@ cargo clean
 cargo run
 ```
 You will see output `Hello COMP423` in your terminal.
-!!! note "Difference between cargo build and cargo run"
+??? note "Difference between cargo build and cargo run"
     `cargo run` combines building and executing into one command. `cargo build` is only building. Use `cargo run` if you want to actively developing and testing your program. Use `cargo build` when you are preparing your program for deployment or further steps.
 
 Yeah! you finished your first rust program!
